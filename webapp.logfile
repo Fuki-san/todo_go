@@ -1,0 +1,3 @@
+2024/03/15 17:56:54 main.go:15: test
+2024/03/19 16:02:24 users.go:21: near "VALUSE": syntax error
+2024/03/19 16:03:18 users.go:21: near "VALUE": syntax error
