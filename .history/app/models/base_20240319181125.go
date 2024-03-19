@@ -46,9 +46,6 @@ func init(){
 		created_at DATETIME
 	)`, tableNameTodo)
 	_, err = Db.Exec(cmdT);
-	if err != nil{
-		log.Fatalf("Fatled to create table %s : %v", tableNameTodo, err)
-	}
 }
 
 func CreateUUID() (uuidobj uuid.UUID){

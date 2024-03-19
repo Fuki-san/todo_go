@@ -40,21 +40,5 @@ func GetUser(id int) (user User, err error){
 	return user, err
 }
 
-func (u *User) UpdateUser() (err error){
-	//指定したidのnameとemailを更新する
-	cmd := `UPDATE users SET name = ?, email = ? WHERE id = ?`
-	_, err = Db.Exec(cmd, u.Name, u.Email, u.ID)
-	if err != nil {
-		log.Fatalln(err)
-	}
-	return err
-}
+func UpdateUser() error
 
-func (u *User) DeleteUser() (err error){
-	cmd := `DELETE FROM users WHERE id = ?`
-	_, err = Db.Exec(cmd, u.ID)
-	if err != nil {
-		log.Fatalln(err)
-	}
-	return err
-}

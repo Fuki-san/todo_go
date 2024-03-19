@@ -57,4 +57,4 @@ func (u *User) DeleteUser() (err error){
 		log.Fatalln(err)
 	}
 	return err
-}
+	

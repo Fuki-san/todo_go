@@ -41,14 +41,8 @@ func init(){
 
 	cmdT := fmt.Sprintf(`CREATE TABLE IF NOT EXISTS %s(
 		id INTEGER PRIMARY KEY AUTOINCREMENT,
-		content TEXT NOT NULL,
-		user_id INTEGER,
-		created_at DATETIME
+		content TEXT
 	)`, tableNameTodo)
-	_, err = Db.Exec(cmdT);
-	if err != nil{
-		log.Fatalf("Fatled to create table %s : %v", tableNameTodo, err)
-	}
 }
 
 func CreateUUID() (uuidobj uuid.UUID){

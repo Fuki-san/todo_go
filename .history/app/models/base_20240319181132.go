@@ -47,7 +47,7 @@ func init(){
 	)`, tableNameTodo)
 	_, err = Db.Exec(cmdT);
 	if err != nil{
-		log.Fatalf("Fatled to create table %s : %v", tableNameTodo, err)
+		log.Fatalf("Fatled to create table %s : %v", tableNameUser, err)
 	}
 }
 
